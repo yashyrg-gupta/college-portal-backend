@@ -50,20 +50,19 @@ class CommitteeMember(SoftDeleteModel):
         null=True,
         blank=True,
         related_name="antiragging_committee_members",
-        verbose_name="Faculty Member (if internal faculty)",
-        help_text="Select faculty member, or leave blank and enter name below for external/non-faculty members.",
+        verbose_name="Member Name (Faculty)",
+        help_text="Select faculty member, or leave blank and enter name below for external/non-teaching members.",
     )
     name = models.CharField(
         max_length=150,
         blank=True,
-        verbose_name="Member Name (for external / non-faculty)",
+        verbose_name="Member Name (Non-Teaching/External Member)",
         help_text="Required if not selecting a faculty member above.",
     )
     affiliation = models.CharField(
         max_length=150,
         blank=True,
-        verbose_name="Affiliation / Department / Organization",
-        help_text="e.g., District Administration, Lucknow Police, NGO, Student, Parent, Non-Teaching Staff",
+        verbose_name="Designation in Committee"
     )
     designation = models.CharField(max_length=150, choices=designation_choices)
     other_designation = models.CharField(

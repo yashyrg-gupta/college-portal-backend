@@ -15,36 +15,12 @@ User = get_user_model()
 class Grievance(SoftDeleteModel):
 
     NATURE_OF_GRIEVANCE_CHOICES = [
-        ("admission_contrary_to_merit", "Making admission contrary to merit"),
-        ("irregularity_in_admission", "Irregularity in the admission process"),
-        (
-            "refusing_admission",
-            "Refusing admission in accordance with the declared admission policy of the institute",
-        ),
-        ("ragging", "Ragging"),
-        ("sexual_harassment", "Sexual harassment"),
-        ("non_publication_of_prospectus", "Non publication of prospectus"),
-        (
-            "false_misleading_prospectus",
-            "Publishing false or misleading information in the prospectus",
-        ),
-        (
-            "withhold_documents",
-            "Withhold or refuse to return any document (certificates/degree/diploma or any other award/document for the purpose of seeking admission)",
-        ),
-        (
-            "excess_fee_demand",
-            "Demand of money in excess of that specified in the declared admission policy",
-        ),
-        (
-            "reservation_policy_breach",
-            "Breach of the policy for reservation in admission",
-        ),
-        ("discrimination", "Complaints of alleged discrimination of students from SC/ST/OBC/Women/Minority or Disabled categories"),
-        ("scholarship_delay", "Non payment or delay in payment of scholarships to any student"),
-        ("exam_delay", "Delay in conduct of examinations or declaration of results"),
-        ("no_student_amenities", "No provision of student amenities"),
-        ("unfair_evaluation", "Unfair evaluation practices"),
+
+        ("ragging", "Ragging Related"),
+        ("admission","Admission Related"),
+        ("examination","Examination Related"),
+        ("unfair_means","Unfair Means Related"),
+        ("scholarship","Scholarship Related"),
         ("Other", "Others"),
     ]
 
